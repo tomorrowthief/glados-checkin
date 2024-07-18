@@ -46,7 +46,10 @@ const notify = async (contents) => {
 }
 
 const main = async () => {
-  await notify(await glados())
+  const randTime = Math.random(0, 1) * 60 * 60 * 1000
+  setTimeout(() => {
+    await notify(await glados())
+  }, randTime)
 }
 
 main()
