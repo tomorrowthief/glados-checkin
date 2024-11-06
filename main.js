@@ -31,7 +31,8 @@ const glados = async () => {
 }
 
 const main = async () => {
-  await glados()
+  const res = await glados()
+  console.log('login res', res)
 }
 
 main()
