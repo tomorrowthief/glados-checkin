@@ -22,6 +22,7 @@ const glados = async () => {
       `Left Days ${JSON.stringify(status)}`,
     ]
   } catch (error) {
+    console.log(error)
     return [
       'Checkin Error',
       `${error}`,
