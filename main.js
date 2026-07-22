@@ -1,6 +1,6 @@
 const glados = async () => {
   const cookie = process.env.GLADOS
-  console.log('start')
+  console.log('start 111')
   if (!cookie) return
   try {
     const headers = {
@@ -13,10 +13,13 @@ const glados = async () => {
       headers: { ...headers, 'content-type': 'application/json' },
       body: '{"token":"glados.cloud"}',
     }).then((r) => r.json())
+    console.log(JSON.stringify(checkin))
+    
     const status = await fetch('https://glados.cloud/api/user/status', {
       method: 'GET',
       headers,
     }).then((r) => r.json())
+    
     return [
       'Checkin OK1',
       `${checkin.message}`,
